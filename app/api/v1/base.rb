@@ -11,7 +11,7 @@ module V1
 
     # 例外ハンドル 404
     rescue_from ActiveRecord::RecordNotFound do |e|
-      rack_response(message:  e.message, status: 404)
+      rack_response({ message: e.message, status: 404 }.to_json, 404)
     end
 
     # 例外ハンドル 400
