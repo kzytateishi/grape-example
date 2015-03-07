@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe V2::MessageBoards do
+RSpec.describe API::V2::MessageBoards, type: :request do
   describe 'GET /api/v2/message_boards' do
     it 'responds successfully' do
       FactoryGirl.create_list(:message_board, 2)

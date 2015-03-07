@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe V2::Comments do
+RSpec.describe API::V2::Comments, type: :request do
   let(:message_board) { FactoryGirl.create(:message_board) }
 
   describe 'GET /api/v2/message_boards/:message_board_id/comments' do
